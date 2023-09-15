@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from "./Components/Header"
+import TitlePage from './Components/UI/TitlePage';
+import react from "react";
+import Register from './Components/Register/Register';
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+<Header/>
+<TitlePage
+title="Home"
+subtitle="Les dernières News : "
+/>
+<Register/>
+
     </div>
   );
 }
