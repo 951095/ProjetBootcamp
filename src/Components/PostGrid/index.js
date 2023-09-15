@@ -1,18 +1,14 @@
+import React from "react";
 import PostCard from "../PostCard";
-import "./style.css";
 
-const Index = ({products}) => {
+const Index = ({ posts }) => {
   return (
     <div className="posts__grid">
-      {
-        products.map(
-          (posts) => (
-            <PostCard posts={posts} />
-          )
-        )
-      }
+      {posts.map((post) => (
+        <PostCard key={post.id} post={post} />
+      ))}
     </div>
   );
-}
+};
 
 export default Index;

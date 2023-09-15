@@ -1,20 +1,20 @@
+import React from "react";
 import "./style.css";
 
-const Index = ({ posts }) => {
+const Index = ({ post }) => {
+  console.log(post);
 
-  console.log(posts);
-  
   return (
     <div className="post__card">
-      <div className="product__thumbnail">
-        <img src={posts.pictures} />
+      <div className="posts__thumbnail">
+        <img src={post.picture} alt={post.title} />
       </div>
-      <div className="product__content">
-        <h2>{posts.title}</h2>
-        <p>{posts.content}</p>
+      <div className="posts__content">
+        <h2>{post.title}</h2>
+        <p>{post.content}</p>
       </div>
     </div>
   );
-}
+};
 
 export default Index;
